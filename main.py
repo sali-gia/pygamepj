@@ -87,6 +87,8 @@ class Game:
                             self.bullets.add(bullet)
                             self.all_sprites.add(bullet)
                 # TODO(F5): 게임 오버 상태에서 R 키를 누르면 self.reset() 으로 새 판을 시작할 것.
+                    if event.key == pygame.K_r and self.game_over:
+                        self.reset()
 
     def handle_title_event(self, event):
         """시작 화면의 입력: SPACE 면 새 판 시작, ESC 면 종료. (적 생성·발사 없음)"""
@@ -189,6 +191,8 @@ class Game:
         self.draw_text("GAME OVER", self.big_font, RED, center=(cx, HEIGHT // 2 - 80))
         self.draw_text(f"SCORE: {self.score}", self.font, WHITE, center=(cx, HEIGHT // 2 - 10))
         # TODO(F5): 최고 점수("HIGH SCORE: 300")와 재시작 안내("Press R to restart")도 표시할 것.
+        self.draw_text(f"HIGH SCORE: {self.high_score}", self.font, YELLOW, center=(cx, HEIGHT // 2 + 35))
+        self.draw_text("Press R to restart", self.font, WHITE, center=(cx, HEIGHT // 2 + 95))
         pass
 
     # ---------------- 게임 루프 ----------------
