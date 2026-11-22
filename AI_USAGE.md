@@ -13,4 +13,9 @@ AI 를 전혀 쓰지 않았다면 표를 지우고 "이 과제에서 생성형 A
 
 | 날짜 | 도구 | 관련 기능 | 무엇을 물었나 | 결과를 어떻게 반영/수정했나 |
 |---|---|---|---|---|
-| 예시 2026-01-01 | ChatGPT | F1 | 방향키를 누르고 있는 동안 계속 움직이게 하는 방법 | `pygame.key.get_pressed()` 사용법만 참고, 화면 경계 처리는 직접 작성 |
+| 2026-11-18 | Gemini | 기타 | Python 3.12를 설치 하지 않고 버전을 변경하여 'pip install pygame' 하는 법 | 선택지 중 python.org에서 Python 3.12 설치를 반영 |
+| 2026-11-22 | Gemini | P3 | 커밋 메시지를 수정하는 방법을 알려줘. 이미 --no-ff를 했어. 만약 깃허브에서 수정할 수 있다면 방법을 알려줘. | 'git log --oneline --graph --all' 에서 수정 할 첫 커밋 해쉬를 찾고, 'git rebase -i --rebase-merges --committer-date-is-author-date <첫커밋해쉬>' 를 하여 나타나는 편집기에서 수정할 커밋의 앞의 'pick' 을 'reword' 로 변경. 이후 편집기에서 커밋 메시지를 변경하는 방법을 그대로 진행 |
+| 2026-11-18 | Gemini | 기타 | '(main, entities, settings)' py 파일에 있는 함수와 변수, 상수의 이름과 역할, 설명을 표로 작성해서 만들어줘. |  |
+| 2026-11-22 | Gemini | F5 | 파이썬에서 txt파일에 접근해서 읽기, 쓰기 하는 방법이 어떻게 돼? | 사용법을 참고 하여 직접 작성 |
+| 2026-11-22 | Gemini | 기타 | '.gitignore' 로 제외 하는 방법 | '__pycache__/', 가상환경 폴더 제외 설정을 저장소에 적용 |
+| 2026-11-22 | Gemini | 기타 | github의 Network에 'feature/restart'에 대한 브랜치가 보이지 않음에 대한 의문 | 방법을 찾지 못함. 'feature/restart' branch는 존재함. |
